@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "linh",
+    "password": "linh"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "trung",
+    "password": "trung"
+}
+
+### 
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFmOGNiMDZiZTU5NWMwMmYyYzMyYWIiLCJpYXQiOjE2NDkwNTU3Njl9.LFkSvUVeK-VxX23ljcr6fGgCpPp4Trtf220b1vVGd60
+
+{
+    "title": "Post 3",
+    "description": "watching movie",
+    "url": "youtube.com",
+    "status": "TO LEARN"
+}
+
+###
+
+GET  http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFmOGNiMDZiZTU5NWMwMmYyYzMyYWIiLCJpYXQiOjE2NDYzMjQ3MTl9.EasaYQvqhxOdJ6m_-oC5WQDX_HWkcqRnx5S_z4v1-lw
+
+###
+
+PUT http://localhost:5000/api/posts/6220e1dbaa7253bbf80c0bea
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFmOGNiMDZiZTU5NWMwMmYyYzMyYWIiLCJpYXQiOjE2NDYzMjQ3MTl9.EasaYQvqhxOdJ6m_-oC5WQDX_HWkcqRnx5S_z4v1-lw
+
+{
+    "title": "Vue",
+    "description": "Vueeeeee",
+    "url": "https://vue.org",
+    "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/6220e680b34cafbdca608261
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFmOGNiMDZiZTU5NWMwMmYyYzMyYWIiLCJpYXQiOjE2NDYzMjQ3MTl9.EasaYQvqhxOdJ6m_-oC5WQDX_HWkcqRnx5S_z4v1-lw
